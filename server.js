@@ -13,7 +13,7 @@ app.use(express.json());
 app.use("*", cors());
 
 app.get("/", (req, res) => {
-    res.send("API is running...");
+    res.send("Review API is running...");
 });
  
 app.use("/review", reviewRoutes);
