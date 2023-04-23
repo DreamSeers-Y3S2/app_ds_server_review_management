@@ -33,21 +33,15 @@ const createReview = asyncHandler(async (req, res) => {
 	}
 });
 
-const getCustomerReviewsById = asyncHandler(async (req, res) => {
-	const review = await Review.findById(req.params.id);
+const getReviewsForEachProduct = asyncHandler(async (req, res) => {
+	const product = await Product.findById(req.params.id);
+	const review = await Review.findOne({ product: product._id });
 
-	if (review) {
-		res.json(review);
-	} else {
-		res.status(404).json({ message: "Reviews Details not Found" });
-	}
+	res.json(review);
 });
 
 module.exports = {
 	createReview,
 	getReviews,
-	// updateReviews,
-	// deleteReviews,
-	// approveReviewByAdmin,
-	getCustomerReviewsById,
+	getReviewsForEachProduct,
 };
