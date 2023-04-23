@@ -35,7 +35,7 @@ const createReview = asyncHandler(async (req, res) => {
 
 const getReviewsForEachProduct = asyncHandler(async (req, res) => {
 	const product = await Product.findById(req.params.id);
-	const review = await Review.findOne({ product: product._id });
+	const review = await Review.find({ product: product._id });
 
 	res.json(review);
 });
