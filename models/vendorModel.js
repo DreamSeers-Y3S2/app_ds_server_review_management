@@ -1,3 +1,7 @@
+/**
+ * This model is implemented for
+ * the Vendor
+ */
 const mongoose = require("mongoose");
 
 const vendorSchema = mongoose.Schema(

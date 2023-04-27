@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
 	res.send("Review API is running...");
 });
 
+//review server start route
 app.use("/review", reviewRoutes);
 app.use(notFound);
 app.use(errorHandler);

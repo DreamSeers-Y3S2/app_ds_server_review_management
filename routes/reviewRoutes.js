@@ -3,7 +3,7 @@ const { protectCustomer } = require("../middleware/authCustomerMiddleware");
 const { getReviews, createReview, getReviewsForEachProduct } = require("../controllers/reviewController");
 const router = express.Router();
 
-// review single User routes
+// review creation customer routes
 router.route("/customer/review/create").post(protectCustomer, createReview);
 router.route("/customer/review/get").get(protectCustomer, getReviews);
 

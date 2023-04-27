@@ -2,11 +2,13 @@ const Review = require("../models/reviewModel");
 const Product = require("../models/productModel");
 const asyncHandler = require("express-async-handler");
 
+//get all of reviews for products
 const getReviews = asyncHandler(async (req, res) => {
 	const review = await Review.find();
 	res.json(review);
 });
 
+// create  a new review according to the product
 const createReview = asyncHandler(async (req, res) => {
 	const { product, email, reviewName, reviewTittle, reviewDescription, rating } = req.body;
 
@@ -33,6 +35,7 @@ const createReview = asyncHandler(async (req, res) => {
 	}
 });
 
+// get reviews for  each single product
 const getReviewsForEachProduct = asyncHandler(async (req, res) => {
 	const product = await Product.findById(req.params.id);
 	const review = await Review.find({ product: product._id });

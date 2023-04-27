@@ -1,3 +1,7 @@
+/**
+ * This model is implemented for
+ * the Customer
+ */
 const mongoose = require("mongoose");
 
 const customerSchema = mongoose.Schema(

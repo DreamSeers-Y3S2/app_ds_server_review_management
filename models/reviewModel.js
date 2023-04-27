@@ -1,3 +1,7 @@
+/**
+ * This model is implemented for
+ * the Review  management
+ */
 const mongoose = require("mongoose");
 const reviewSchema = mongoose.Schema({
 	product: {

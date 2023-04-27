@@ -1,3 +1,7 @@
+/**
+ * This model is implemented for
+ * the Product management
+ */
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 

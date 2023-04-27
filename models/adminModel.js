@@ -1,3 +1,8 @@
+/**
+ * This model is implemented for
+ * the Admin
+ */
+
 const mongoose = require("mongoose");
 
 const adminSchema = mongoose.Schema(
